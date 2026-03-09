@@ -1,0 +1,2 @@
+//System.out.print("Enter Roll no of Student " + (i + 1) + " : ");
+//System.out.print("Enter Marks out of 100 for Subject " + i + " : ");

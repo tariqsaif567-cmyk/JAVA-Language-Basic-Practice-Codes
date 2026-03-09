@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+
+public class Question3 {
+    public static void main(String[] args) {
+        ArrayList<Integer> rollno = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Integer> marks = new ArrayList<>();
+        try {
+            Scanner input = new Scanner(new File("students.txt"));
+            while (input.hasNext()) {
+                int rollNo = input.nextInt();
+                input.nextLine();
+                String name = input.nextLine();
+                int markss = input.nextInt();
+                if (markss == 49)
+                    markss = 50;
+
+                rollno.add(rollNo);
+                names.add(name);
+                marks.add(markss);
+
+            }
+            BufferedWriter bw = new BufferedWriter(new FileWriter("students.txt"));
+            for (int i = 0; i < rollno.size(); i++) {
+                bw.write(rollno.get(i) + "\n");
+                bw.write(names.get(i) + "\n");
+                bw.write(marks.get(i) + "\n");
+            }
+
+            bw.close();
+            System.out.println("Files Updated Successfully.");
+        } catch (FileNotFoundException e1) {
+            System.out.println("File not Found");
+        } catch (IOException e2) {
+            System.out.println(e2.toString());
+        } catch (InputMismatchException e3) {
+            System.out.println(e3.toString());
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+
+    }
+}

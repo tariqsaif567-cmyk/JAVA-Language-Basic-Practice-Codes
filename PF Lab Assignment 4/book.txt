@@ -1,0 +1,4 @@
+Java is a versatile programming language used for building desktop, web, and mobile applications. 
+Many developers prefer Java because of its portability and security features. 
+Learning JAVA opens doors to many opportunities in the software industry. 
+Even in 2025, java continues to be popular among programmers worldwide.
